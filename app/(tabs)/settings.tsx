@@ -465,7 +465,7 @@ export default function SettingsScreen() {
           {expandedSections.about && (
             <View style={styles.sectionContent}>
               <View style={styles.aboutCard}>
-                <Text style={styles.aboutTitle}>TheAQ3DC</Text>
+                <Text style={styles.aboutTitle}>AQ3DC</Text>
                 <Text style={styles.aboutVersion}>Version 1.0.0</Text>
                 <Text style={styles.aboutDescription}>
                   Comprehensive 3D printing management solution with wireless connectivity, voice control, auto-pause functionality, and more.

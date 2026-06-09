@@ -64,7 +64,7 @@ export function Sidebar() {
     <View style={styles.container}>
       {/* Logo */}
       <View style={styles.logoSection}>
-        <Text style={styles.logoText}>TheAQ3DC</Text>
+        <Text style={styles.logoText}>AQ3DC</Text>
         <Text style={styles.logoSubtext}>3D Printing Hub</Text>
       </View>
 
