@@ -27,7 +27,7 @@ import {
   Edit3,
   Trash2,
   Save,
-  Wifi,
+  Bluetooth,
   Info,
 } from 'lucide-react-native';
 import { Colors, Spacing, BorderRadius, Shadows } from '@/lib/theme';
@@ -52,7 +52,7 @@ export default function SettingsScreen() {
   const [newPrinter, setNewPrinter] = useState({
     name: '',
     model: '',
-    ip_address: '',
+    bluetooth_address: '',
     build_volume_x: '220',
     build_volume_y: '220',
     build_volume_z: '250',
@@ -120,7 +120,7 @@ export default function SettingsScreen() {
       await supabase.from('printers').insert({
         name: newPrinter.name,
         model: newPrinter.model,
-        ip_address: newPrinter.ip_address || null,
+        bluetooth_address: newPrinter.bluetooth_address || null,
         build_volume_x: parseInt(newPrinter.build_volume_x) || 220,
         build_volume_y: parseInt(newPrinter.build_volume_y) || 220,
         build_volume_z: parseInt(newPrinter.build_volume_z) || 250,
@@ -132,7 +132,7 @@ export default function SettingsScreen() {
       setNewPrinter({
         name: '',
         model: '',
-        ip_address: '',
+        bluetooth_address: '',
         build_volume_x: '220',
         build_volume_y: '220',
         build_volume_z: '250',
@@ -344,8 +344,8 @@ export default function SettingsScreen() {
               </View>
 
               <View style={styles.detailRow}>
-                <Text style={styles.detailLabel}>IP Address</Text>
-                <Text style={styles.detailValue}>{selectedPrinter.ip_address || 'Not set'}</Text>
+                <Text style={styles.detailLabel}>Bluetooth Address</Text>
+                <Text style={styles.detailValue}>{selectedPrinter.bluetooth_address || 'Not paired'}</Text>
               </View>
 
               <View style={styles.detailRow}>
@@ -511,13 +511,13 @@ export default function SettingsScreen() {
               </View>
 
               <View style={styles.inputGroup}>
-                <Text style={styles.inputLabel}>IP Address</Text>
+                <Text style={styles.inputLabel}>Bluetooth Address</Text>
                 <TextInput
                   style={styles.input}
-                  placeholder="e.g., 192.168.1.100"
+                  placeholder="e.g., 00:11:22:33:44:55"
                   placeholderTextColor={Colors.text.tertiary}
-                  value={newPrinter.ip_address}
-                  onChangeText={text => setNewPrinter(prev => ({ ...prev, ip_address: text }))}
+                  value={newPrinter.bluetooth_address}
+                  onChangeText={text => setNewPrinter(prev => ({ ...prev, bluetooth_address: text }))}
                 />
               </View>
 

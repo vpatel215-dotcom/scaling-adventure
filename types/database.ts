@@ -43,7 +43,7 @@ export type Printer = {
   name: string;
   model: string;
   status: PrinterStatus;
-  ip_address: string | null;
+  bluetooth_address: string | null;
   firmware_version: string | null;
   build_volume_x: number;
   build_volume_y: number;

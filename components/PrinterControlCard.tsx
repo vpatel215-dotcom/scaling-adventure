@@ -7,8 +7,8 @@ import {
   RotateCcw,
   Thermometer,
   Gauge,
-  Wifi,
-  WifiOff,
+  Bluetooth,
+  BluetoothOff,
   Settings,
   MoreVertical,
 } from 'lucide-react-native';
@@ -43,9 +43,9 @@ export function PrinterControlCard({ printer, onRefresh }: PrinterControlCardPro
           <View style={styles.headerRight}>
             <View style={styles.connectionStatus}>
               {isOnline ? (
-                <Wifi size={16} color={Colors.success[500]} />
+                <Bluetooth size={16} color={Colors.success[500]} />
               ) : (
-                <WifiOff size={16} color={Colors.text.tertiary} />
+                <BluetoothOff size={16} color={Colors.text.tertiary} />
               )}
             </View>
             <TouchableOpacity style={styles.menuButton}>

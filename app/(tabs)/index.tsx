@@ -19,8 +19,6 @@ import {
   Clock,
   Layers,
   Zap,
-  Wifi,
-  WifiOff,
   ChevronRight,
   Plus,
 } from 'lucide-react-native';
