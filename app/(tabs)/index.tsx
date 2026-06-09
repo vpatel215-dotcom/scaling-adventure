@@ -19,8 +19,6 @@ import {
   Clock,
   Layers,
   Zap,
-  Wifi,
-  WifiOff,
   ChevronRight,
   Plus,
 } from 'lucide-react-native';
@@ -86,7 +84,7 @@ export default function DashboardScreen() {
         {/* Header */}
         <LinearGradient colors={[Colors.background.tertiary, Colors.background.primary]} style={styles.header}>
           <View style={styles.headerContent}>
-            <Text style={styles.title}>TheAQ3DC</Text>
+            <Text style={styles.title}>AQ3DC</Text>
             <Text style={styles.subtitle}>{printers.length} Printer{printers.length !== 1 ? 's' : ''} Connected</Text>
           </View>
           <TouchableOpacity style={styles.addButton}>
